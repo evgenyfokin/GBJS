@@ -1,13 +1,17 @@
-class Book {
-    constructor(title, author, pages) {
-        this.title = title
-        this.author = author
-        this.pages = pages
-    }
-    displayInfo = () => {
-        console.log(`${this.title} by ${this.author}, ${this.pages} pages.`)
-    }
+const numbers = {
+    keyin1: 1,
+    keyin2: 2,
+    keyin3: 3,
+    keyin4: 4,
+    keyin5: 5,
+    keyin6: 6,
+    keyin7: 7,
 }
 
-const capital = new Book('Capital', 'Karl Marx', 547)
-capital.displayInfo()
+const filteredList = Object.keys(numbers).reduce((acc, key) => {
+    if (numbers[key] >= 3) {
+        acc[key] = numbers[key]
+    }
+    return acc
+},{})
+console.log(filteredList)
