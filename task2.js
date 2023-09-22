@@ -1,16 +1,13 @@
-const createCounter = () => {
-    let acc = 0
-    return ({
-        increment: () => acc++,
-        decrement: () => acc--,
-        getCount: () => console.log(acc)
-    })
+class Student {
+    constructor(name, age, grade) {
+        this.name = name
+        this.age = age
+        this.grade = grade
+    }
+    displayInfo = () => {
+        console.log(`name: ${this.name}, age: ${this.age}, grade: ${this.grade}`)
+    }
 }
-const count = createCounter()
 
-count.getCount()
-count.increment()
-count.increment()
-count.getCount()
-count.decrement()
-count.getCount()
+const Jeffrey = new Student('Jeffrey', 14, 'A')
+Jeffrey.displayInfo()

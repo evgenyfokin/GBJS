@@ -1,5 +1,13 @@
+class Book {
+    constructor(title, author, pages) {
+        this.title = title
+        this.author = author
+        this.pages = pages
+    }
+    displayInfo = () => {
+        console.log(`${this.title} by ${this.author}, ${this.pages} pages.`)
+    }
+}
 
-const arr = [1, 5, 7, 9]
-console.log(`Task1: ${Math.min(...arr)}`)
-
-
+const capital = new Book('Capital', 'Karl Marx', 547)
+capital.displayInfo()
